@@ -18,7 +18,7 @@ $(ANDROID_BUILD_DIR)/xz: $(ANDROID_STANDALONE_TOOLCHAIN_DIR) | $(ANDROID_BUILD_D
 	cd $@ && $(XZ_SOURCES)/configure $(ANDROID_EXTRA_CONFIGURE_FLAGS) LDFLAGS="-pie"
 
 XZ_BRANCH_OR_TAG = v5.2.5
-XZ_REPO = https://git.tukaani.org/xz.git
+XZ_REPO =https://github.com/xz-mirror/xz.git
 projects/xz/sources:
 ifeq ($(shell whoami), vagrant)
 	git clone $(XZ_REPO) /tmp/xz_sources -b $(XZ_BRANCH_OR_TAG)
